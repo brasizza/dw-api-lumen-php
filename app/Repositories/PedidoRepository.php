@@ -37,9 +37,35 @@ class PedidoRepository
      * @throws InvalidArgumentException
      */
     public function findOrderById($idUsuario){
-        return Pedido::with(['items' => function($query){
+        return $this->processData(Pedido::with(['items' => function($query){
             $query->with('item');
-        }])->where('id_usuario', $idUsuario)->get();
+        }])->where('id_usuario', $idUsuario)->get());
 
+    }
+
+    public function processData($orders){
+        $newArray = [];
+        foreach($orders as $idxO => $order){
+            $newArray[$idxO] = [
+
+                'id'=> $order['id'],
+                'paymentType'=> $order['forma_pagamento'],
+                'address'=> $order['endereco_entrega'],
+            ];
+
+
+        $items  = array();
+
+        foreach($order['items'] as $idxI => $item){
+
+            $items[$idxI] = [
+                'id' =>  $item['id'],
+                'item' => $item['item']
+            ];
+        }
+        $newArray[$idxO]['items'] = $items;
+
+    }
+        return $newArray;
     }
 }

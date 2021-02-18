@@ -34,12 +34,10 @@ class PedidoController extends Controller
         try{
            $pedido =  $this->repository->order($request);
            $pedidoItemRepository = new PedidoItemRepository();
-           $pedidoItemCotroller = new PedidoItemController($pedidoItemRepository);
-           $pedidoItemCotroller->add($pedido,$request->itemsId);
-
+           $pedidoItemRepository->add($pedido,$request->itemsId);
            return $this->successResponse("Pedido enviado!");
-
         }catch(Exception $e){
+            dd($e);
             return $this->errorResponse('Falha ao inserir o pedido', Response::HTTP_NOT_ACCEPTABLE);
         }
     }

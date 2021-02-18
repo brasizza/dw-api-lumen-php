@@ -79,6 +79,8 @@ class UserController extends Controller
         try {
             return $this->successResponse($this->repository->findMyOrders($id));
         } catch (\Exception $e) {
+
+            dd($e);
             return $this->errorResponse("Falha ao recuperar meus pedidos", Response::HTTP_INTERNAL_SERVER_ERROR);
         }
     }

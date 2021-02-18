@@ -27,7 +27,7 @@ $router->post('/auth', 'UserController@login');
 
 $router->group(['prefix' => '/order'], function () use ($router) {
     $router->get('/user/{id}', 'UserController@findOrders');
-    $router->post('/auth', 'UserController@login');
+    $router->post('/', 'PedidoController@order');
     });
 
 

@@ -19,56 +19,56 @@ class CardapioProdutoItemSeeder extends Seeder
 
         CardapioProdutoItem::create([
             'id_cardapio_grupo' => 1,
-            'nome' => "Mussarela",
-            'valor' => 35
+            'name' => "Mussarela",
+            'price' => 35
         ]);
 
         CardapioProdutoItem::create([
             'id_cardapio_grupo' => 1,
-            'nome' => "Calabreza",
-            'valor' => 30
+            'name' => "Calabreza",
+            'price' => 30
         ]);
 
         CardapioProdutoItem::create([
             'id_cardapio_grupo' => 1,
-            'nome' => "Quatro Queijos",
-            'valor' => 45
+            'name' => "Quatro Queijos",
+            'price' => 45
         ]);
 
         CardapioProdutoItem::create([
             'id_cardapio_grupo' => 1,
-            'nome' => "Napolitada",
-            'valor' => 32.9
+            'name' => "Napolitada",
+            'price' => 32.9
         ]);
 
         CardapioProdutoItem::create([
             'id_cardapio_grupo' => 1,
-            'nome' => "Marguerita",
-            'valor' => 36.9
+            'name' => "Marguerita",
+            'price' => 36.9
         ]);
 
         CardapioProdutoItem::create([
             'id_cardapio_grupo' => 1,
-            'nome' => "Portuguesa",
-            'valor' => 49.9
+            'name' => "Portuguesa",
+            'price' => 49.9
         ]);
 
         CardapioProdutoItem::create([
             'id_cardapio_grupo' => 2,
-            'nome' => "Brigadeiro",
-            'valor' => 49.9
+            'name' => "Brigadeiro",
+            'price' => 49.9
         ]);
 
         CardapioProdutoItem::create([
             'id_cardapio_grupo' => 2,
-            'nome' => "Banana",
-            'valor' => 30.9
+            'name' => "Banana",
+            'price' => 30.9
         ]);
 
         CardapioProdutoItem::create([
             'id_cardapio_grupo' => 2,
-            'nome' => "Goiabada",
-            'valor' => 50
+            'name' => "Goiabada",
+            'price' => 50
         ]);
 
         Model::unguard(false);

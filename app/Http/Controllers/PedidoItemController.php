@@ -19,16 +19,4 @@ class PedidoItemController extends Controller
         $this->repository = $repository;
     }
 
-
-
-    /**
-     * @param Pedido $pedido
-     * @param mixed $items
-     * @return mixed
-     * @throws \Exception
-     */
-    public function add(Pedido $pedido, $items){
-
-      return   $this->repository->add($pedido,$items);
-    }
 }

@@ -17,8 +17,8 @@ class CreateCardapioGrupoItem extends Migration
             $table->id();
             $table->unsignedBigInteger('id_cardapio_grupo')->references('id')->on('cardapio_grupo');
             $table->index('id_cardapio_grupo');
-            $table->string('nome');
-            $table->decimal('valor', 10,2);
+            $table->string('name');
+            $table->decimal('price', 10,2);
             $table->timestamps();
         });
     }
